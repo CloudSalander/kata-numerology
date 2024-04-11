@@ -18,13 +18,24 @@ function reduceNumber(int $number): int {
     return $sum_figures;
 }
 
-function getNumberMeaning(int $number): void {
-    
+function getNumberMeaning(int $number): string {
+    return match($number) {
+        0 => 'el tot',
+        1 => 'individualitad',
+        2 => 'dualidad',
+        3 => 'raó',
+        4 => 'estabilitat',
+        5 => 'amor',
+        6 => 'destrucció',
+        7 => 'saviessa',
+        8 => 'poder',
+        9 => 'generositat'
+    };
 }
 
 function printNumberMeaning(int $number): void {
     $reduced_number = reduceNumber($number);
-    var_dump($reduced_number);
+    echo getNumberMeaning($reduced_number).PHP_EOL;
 }
 
 $num = 0;
