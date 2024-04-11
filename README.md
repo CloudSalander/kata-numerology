@@ -30,3 +30,5 @@ Hem de fer un programa que, donat un número enter positiu ens digui el seu sign
 **Output**
 - Destrucció
 - Dualitat
+
+**Nota: El mentor/a no té ni idea de numerologia per tant, no us ho preneu a la valenta :)**
