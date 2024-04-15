@@ -3,17 +3,18 @@ define("EXIT_CODE",-1);
 
 function sumFigures(int $number): int {
     $sum = 0;
-    while(($number / 10) > 0) {
+    while(intdiv($number,10) > 0) {
         $sum += $number % 10;
-        $number /= 10;
+        $number = intdiv($number,10);
     }
     return $sum + $number % 10;
 }
 
 function reduceNumber(int $number): int {
     $sum_figures = $number;
-    while ($sum_figures >= 10) {
+    while ($sum_figures > 9) {
         $sum_figures = sumFigures($number);
+        $number = $sum_figures;
     }
     return $sum_figures;
 }
@@ -21,7 +22,7 @@ function reduceNumber(int $number): int {
 function getNumberMeaning(int $number): string {
     return match($number) {
         0 => 'el tot',
-        1 => 'individualitad',
+        1 => 'individualitat',
         2 => 'dualidad',
         3 => 'raó',
         4 => 'estabilitat',
